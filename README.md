@@ -1,4 +1,4 @@
-# 🌑 Orbion Panel
+# 🌑 Orbion Pane
 
 **Orbion Panel** is a modern, high-performance Minecraft Server Management Panel built with **Node.js** and **React**. Designed to manage a single server with maximum efficiency and elegance, it provides a powerful web interface to control your Minecraft server, manage files, schedule backups, and monitor performance in real-time.
 
@@ -393,6 +393,8 @@ MIT License - feel free to use for personal or commercial projects.
 ---
 
 **Need help?** Open an issue or join our Discord community.
-#   O r b i o n - P a n e l  
- #   O r b i o n - P a n e l  
+#   O r b i o n - P a n e l 
+ 
+ #   O r b i o n - P a n e l 
+ 
  
