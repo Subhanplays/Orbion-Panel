@@ -1,8 +1,8 @@
-# 🌑 Obsidian Panel
+# 🌑 Orbion Panel
 
-**Obsidian Panel** is a modern, high-performance Minecraft Server Management Panel built with **Node.js** and **React**. Designed to manage a single server with maximum efficiency and elegance, it provides a powerful web interface to control your Minecraft server, manage files, schedule backups, and monitor performance in real-time.
+**Orbion Panel** is a modern, high-performance Minecraft Server Management Panel built with **Node.js** and **React**. Designed to manage a single server with maximum efficiency and elegance, it provides a powerful web interface to control your Minecraft server, manage files, schedule backups, and monitor performance in real-time.
 
-![Obsidian Panel Interface](images/dashboard.png)
+![Orbion Panel Interface](images/dashboard.png)
 
 ## 🚀 Installation
 
@@ -15,7 +15,7 @@
 
 ### Method 1: Automated Install Script (Recommended) ⚡
 
-The easiest way to install Obsidian Panel with a single command:
+The easiest way to install Orbion Panel with a single command:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/honeypie112/Obsidian-Panel/master/install.sh)
@@ -27,7 +27,7 @@ bash <(curl -s https://raw.githubusercontent.com/honeypie112/Obsidian-Panel/mast
 - ✅ Prompts for MongoDB URI (required)
 - ✅ Builds Docker image with Java 8, 17, and 21 pre-installed
 - ✅ Creates and starts the container with proper port mappings
-- ✅ Uses persistent Docker volume `obsidian-data` for server data
+- ✅ Uses persistent Docker volume \`orbion-data\` for server data
 - ✅ Optional cleanup of source files after installation
 
 **Access the panel:**
@@ -58,12 +58,12 @@ nano .env
 ```env
 # Database (Required)
 MONGO_URI=mongodb://mongo:27017
-MONGO_DB_NAME=obsidian_panel
+MONGO_DB_NAME=orbion_panel
 
 # Server Configuration
 PORT=5000
 MC_SERVER_BASE_PATH=/minecraft_server
-TEMP_BACKUP_PATH=/tmp/obsidian_backups
+TEMP_BACKUP_PATH=/tmp/orbion_backups
 SESSION_SECRET=change_this_to_a_secure_random_string
 
 # Optional: Custom Java paths (if needed)
@@ -90,7 +90,7 @@ docker-compose down
 
 **To view logs:**
 ```bash
-docker-compose logs -f obsidian-panel
+docker-compose logs -f orbion-panel
 ```
 
 ### 🔄 Updating the Panel
@@ -196,7 +196,7 @@ Backend dev server runs on http://localhost:5000
 ### 🎨 User Experience
 - **Responsive Design**: Fully optimized for desktop and mobile with collapsible sidebar
 - **Toast Notifications**: Real-time error and success messages
-- **Obsidian Dark Theme**: Glassmorphism effects with smooth animations
+- **Orbion Dark Theme**: Glassmorphism effects with smooth animations
 - **Real-time Updates**: WebSocket-powered live status and statistics
     <br>
     ![Profile Settings](images/profile.png)
@@ -244,10 +244,10 @@ Backend dev server runs on http://localhost:5000
 |----------|---------|-------------|
 | `PORT` | `5000` | Backend server port |
 | `MONGO_URI` | `mongodb://localhost:27017` | MongoDB connection string |
-| `MONGO_DB_NAME` | `obsidian_panel` | Database name |
+| `MONGO_DB_NAME` | `orbion_panel` | Database name |
 | `SESSION_SECRET` | `secret` | Secret key for session signing |
 | `MC_SERVER_BASE_PATH` | `/minecraft_server` | Minecraft server files location |
-| `TEMP_BACKUP_PATH` | `/tmp/obsidian_backups` | Temporary backup storage |
+| `TEMP_BACKUP_PATH` | `/tmp/orbion_backups` | Temporary backup storage |
 | `JAVA_8_HOME` | Auto-detected | Override Java 8 location |
 | `JAVA_17_HOME` | Auto-detected | Override Java 17 location |
 | `JAVA_21_HOME` | Auto-detected | Override Java 21 location |
@@ -294,12 +294,12 @@ All candidates are verified with `java -version` to ensure correct version.
 - **Check Java**: Ensure correct Java version installed
 - **Verify Logs**: Check console for error messages
 - **Toast Notifications**: Error details shown in UI
-- **Backend Logs**: `docker logs obsidian-panel`
+- **Backend Logs**: `docker logs orbion-panel`
 
 ### Memory Issues
 - **Insufficient RAM**: Increase Docker memory limit
 - **Large Logs**: Log buffer limited to 5000 lines
-- **Backup Space**: Monitor `/tmp/obsidian_backups` usage
+- **Backup Space**: Monitor `/tmp/orbion_backups` usage
 
 ### Connection Issues
 - **Port Conflicts**: Ensure port 5000 is available
@@ -316,7 +316,7 @@ docker run -d \
   -e MONGO_URI=mongodb://host:27017 \
   -e SESSION_SECRET=mysecuresecret \
   -v minecraft_data:/minecraft_server \
-  --name obsidian-panel \
+  --name orbion-panel \
   alexbhai/obsidian-panel:latest
 ```
 
@@ -324,16 +324,16 @@ docker run -d \
 ```yaml
 version: '3.8'
 services:
-  obsidian-panel:
+  orbion-panel:
     image: alexbhai/obsidian-panel:latest
-    container_name: obsidian-panel
+    container_name: orbion-panel
     ports:
       - "5000:5000"
       - "25565:25565"
       - "19132:19132/udp"  
     environment:
-      - MONGO_URI=mongodb://admin:secretpassword@mongo:27017/obsidian_panel?authSource=admin
-      - MONGO_DB_NAME=obsidian_panel
+      - MONGO_URI=mongodb://admin:secretpassword@mongo:27017/orbion_panel?authSource=admin
+      - MONGO_DB_NAME=orbion_panel
       - SESSION_SECRET=mysecuresecret
     volumes:
       - minecraft_data:/minecraft_server
@@ -393,3 +393,5 @@ MIT License - feel free to use for personal or commercial projects.
 ---
 
 **Need help?** Open an issue or join our Discord community.
+#   O r b i o n - P a n e l  
+ 
